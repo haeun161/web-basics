@@ -1,0 +1,18 @@
+
+.title
+p{
+    color: blue;
+    font-size: 30px;
+    font-weight:500;
+    text-align: center;
+}
+.text{
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-weight:500;
+    text-align: center;
+}
+
+.endparagraph{
+    margin-bottom: 2rem;
+}

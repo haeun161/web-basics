@@ -14,9 +14,17 @@ body{
     }
 
 /* HEADER */
+.bar1{    background: #000;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    align-items: center; /*모든 아이템 정중앙에 배치*/}
+
 
 header{
-    background: #000;
+    background: grey;
+
     height: 60px;
     width: 100%;
     display: flex;

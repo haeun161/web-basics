@@ -23,14 +23,27 @@ header{
     align-items: center; /*모든 아이템 정중앙에 배치*/}
 
 section.bar1{
-    background: (35,67,62);
-    background-color: (35,67,62);
+    background: darkblue;
+    background-color: darkblue;
     height: 40px;
     width: 100%;
     display: flex;
     position: fixed;
     align-items: center; /*모든 아이템 정중앙에 배치*/
     font-size: 12px;
+}
+
+section.bar2{
+    background: black;
+    background-color: black;
+    background-color: (0,0,0);
+    height: 40px;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    align-items: center; /*모든 아이템 정중앙에 배치*/
+    font-size: 12px;
+}
 }
 
 

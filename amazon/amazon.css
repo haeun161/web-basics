@@ -2,7 +2,7 @@
 
 body{
     font-family: 'Do Hyeon', sans-serif;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 400;
     line-height: 1.4;
     background: #F6F5F0;}
@@ -14,21 +14,25 @@ body{
     }
 
 /* HEADER */
-.bar1{    background: #000;
-    height: 60px;
+header{
+    background: rgb(19, 25, 35);
+    height: 100px;
     width: 100%;
     display: flex;
     position: fixed;
     align-items: center; /*모든 아이템 정중앙에 배치*/}
 
-
-header{
-    background: grey;
-
-    height: 60px;
+section.bar1{
+    background: (35,67,62);
+    background-color: (35,67,62);
+    height: 40px;
     width: 100%;
     display: flex;
     position: fixed;
     align-items: center; /*모든 아이템 정중앙에 배치*/
+    font-size: 12px;
 }
+
+
+
 

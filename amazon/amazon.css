@@ -11,6 +11,7 @@ body{
     color: #F6F5F0;
     font-size: 32px;
     cursor: pointer;
+    margin-left: 10;  /*왼쪽으로 보내기-수정필요*/
     }
 
 /* HEADER */
@@ -43,7 +44,6 @@ section.bar2{
     position: fixed;
     align-items: center; /*모든 아이템 정중앙에 배치*/
     font-size: 12px;
-}
 }
 
 

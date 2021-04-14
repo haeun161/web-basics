@@ -9,7 +9,7 @@ body{
 
 .material-icons{
     color: #F6F5F0;
-    font-size: 32px;
+    font-size: 20px;
     cursor: pointer;
     margin-left: 10;  /*왼쪽으로 보내기-수정필요*/
     }
@@ -21,23 +21,23 @@ header{
     width: 100%;
     display: flex;
     position: fixed;
-    align-items: center; /*모든 아이템 정중앙에 배치*/}
+}
 
-section.bar1{
-    background: darkblue;
-    background-color: darkblue;
+#bar1{
+    background: black;
+    background-color: black;
+
     height: 40px;
     width: 100%;
     display: flex;
     position: fixed;
-    align-items: center; /*모든 아이템 정중앙에 배치*/
+    align-items: flex-end;
     font-size: 12px;
 }
 
-section.bar2{
-    background: black;
-    background-color: black;
-    background-color: (0,0,0);
+#bar2{
+    background: rgb(23, 23, 65);
+    background-color: rgb(23, 23, 65);
     height: 40px;
     width: 100%;
     display: flex;

@@ -14,14 +14,6 @@ body{
     margin-left: 10;  /*왼쪽으로 보내기-수정필요*/
     }
 
-/* HEADER */
-header{
-    background: rgb(19, 25, 35);
-    height: 100px;
-    width: 100%;
-    display: flex;
-    position: fixed;
-}
 
 #bar1{
     background: black;
@@ -44,6 +36,15 @@ header{
     position: fixed;
     align-items: center; /*모든 아이템 정중앙에 배치*/
     font-size: 12px;
+}
+
+/* HEADER */
+header{
+    background: rgb(19, 25, 35);
+    height: 100px;
+    width: 100%;
+    display: flex;
+    position: fixed;
 }
 
 

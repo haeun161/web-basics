@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
     <!--구글 아이콘-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.google.com/icons?selected=Material%20Icons%20Outlined%3Asearch">
     <!--CSS와 js와 연결-->
     <link rel="stylesheet" href="./amazon.css">
     <script defer src="./amazon.js"></script>
@@ -23,7 +24,12 @@
         <header id="main-bar">
             <div id="bar1">
                 <div class="bar1-left"></div>
-                <div class="bar1-middle"></div>
+                <div class="bar1-middle">
+                    <span class="material-icons">
+                        search
+                    </span>
+                </div>
+                
                 <div class="bar1-right"></div>
             </div>
             
@@ -34,8 +40,18 @@
                     모두
                     </span>
                 </div>
-                <div class="bar2-middle"></div>
-                <div class="bar2-right"></div>
+                <div class="bar2-middle">
+                    <div id="divide_bar2">
+                        <a>오늘의 거래</a>
+                        <a>고객서비스</a>
+                        <a>기프트 카드</a>
+                        <a>팔다</a>
+                        <a>레지스트리</a>
+                    </div>
+                </div>
+                <div class="bar2-right">
+                    <p> 기타</p>
+                </div>
             </div>
         </header>
 </body>

@@ -31,7 +31,16 @@ body{
     height: 60px;
     top: 0px;
 }
-
+.bar1-left{
+    display: flex;
+}
+.bar1-middle{
+    color: #F6F5F0;
+    display: flex;
+}
+.bar1-right{
+    display: flex;
+}
     /* Bar2 */
 #bar2{
     background-color: rgb(39, 39, 95);
@@ -42,6 +51,13 @@ body{
     position: fixed;
 }
 
-.bar2-left
-.bar2-middle
-.bar2-right
+.bar2-left{
+    display: flex;
+}
+.bar2-middle{
+    color: #F6F5F0;
+    display: flex;
+}
+.bar2-right{
+    display: flex;
+}

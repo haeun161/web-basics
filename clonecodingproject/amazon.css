@@ -13,40 +13,41 @@ body{
     cursor: pointer;
     margin-left: 10;  /*왼쪽으로 보내기-수정필요*/
     }
-
-
-#bar1{
-    background: black;
-    background-color: black;
-
-    height: 40px;
-    width: 100%;
-    display: flex;
-    position: fixed;
-    align-items: flex-end;
-    font-size: 12px;
-}
-
-#bar2{
-    background: rgb(23, 23, 65);
-    background-color: rgb(23, 23, 65);
-    height: 40px;
-    width: 100%;
-    display: flex;
-    position: fixed;
-    align-items: center; /*모든 아이템 정중앙에 배치*/
-    font-size: 12px;
-}
-
 /* HEADER */
 header{
-    background: rgb(19, 25, 35);
-    height: 100px;
-    width: 100%;
     display: flex;
-    position: fixed;
+    position: static;
+    float: none;
+}
+div{
+
+
+}
+    /* Bar1 */
+#bar1{
+    background-color: black;
+    height: 60px;
+    font-size: 14px;
+    width: 100%;
+    height: 100px;
 }
 
-
-
-
+.bar1-left
+.bar1-middle
+.bar1-right
+    /* Bar2 */
+#bar2{
+    background-color: rgb(39, 39, 95);
+    background-size: 350px;
+    display: flex;
+    position: relative;
+    float: none;
+    height: 39px;
+    width: 100%;
+    align-items: center; /*모든 아이템 정중앙에 배치*/
+    margin-right: 0;
+    margin-top: 100px;
+}
+.bar2-left
+.bar2-middle
+.bar2-right

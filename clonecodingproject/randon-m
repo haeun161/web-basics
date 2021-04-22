@@ -1,0 +1,16 @@
+        <header id="main-bar">
+            <div id="bar1">
+                <div class="bar1-left"></div>
+                <div class="bar1-middle"></div>
+                <div class="bar1-right"></div>
+            </div>
+            
+            <div id="bar2">
+                <div class="bar2-left">
+                    <span class="material-icons">
+                    menu
+                    모두
+                    </span>
+                </div>
+                <div class="bar2-middle"></div>
+                <div class="bar2-right"></div>

@@ -1,63 +1,516 @@
-/* COMMON */
+/* 데스크톱 */
+/* 스크린 너비가 1600px이하면 스타일 속성 적용됨 */
+@media screen and (max-width:1600px){
 
-body{
-    font-family: 'Do Hyeon', sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 1.4;
-    background: #F6F5F0;}
-
-.material-icons{
+    /* 초기화 */
+    * {
+        margin: 0;
+        padding: 0;
+      }
+    
+    /* COMMON */
+    
+    body{
+        font-family: 'Do Hyeon', sans-serif; /* 구글 폰트 */
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.4;
+        background: #F6F5F0;
+        margin: 0 auto;
+    }
+    /* 모든 material-icons */
+    .material-icons{
+            color: #F6F5F0;
+            font-size: 20px;
+            font-weight: 700;
+            padding-top: 7px;
+            padding-left: 10px;
+            white-space: nowrap;
+            cursor: pointer;
+            position: absolute;
+            }
+    
+        /* HEADER */
+    header{
+        width: 100%;
+    }
+    #main-bar{
+        align-items: center;
+    }
+    
+        /* Bar1 */
+    #bar1{
+        background-color: black;
+        height: 60px;
+        font-size: 14px;
+        width: 100%;
+        height: 60px;
+        align-items: center; /* 모든 아이템 정중앙에 배치 */
+        position: relative
+    }
+    
+    /* Bar1-left */
+    
+    /* 로그 이미지 */
+    #bar1-left{
+        background-color: black;
+        height: 60px;
+        font-size: 14px;
+        width: 200px;
+        height: 60px;
+    
+    }
+    
+    /* Bar1-middle */
+    #bar1-middle{
+        background-color: lavenderblush;
+        border: 0.2rem outset blue;
+        outline: 0.2rem solid khaki;
+        border-radius: 12px;
+        margin: 0.5rem;
+        padding: 1rem;
+        top: 0px;
+        left: 150px;
+        padding-left: 500px;
+        display: relative;
+        align-items: center; 
+        position: fixed;
+    }
+    
+    /* SEARCH */
+    .search{
+        color: #000000;
+        font-size: 20px;
+        font-weight: 700;
+        top: 11.2px;
+        left: 168px;
+        white-space: nowrap;
+        cursor: pointer;
+        align-items: center; 
+        position: absolute;
+    }
+    /* SEARCH : 검색 박스 아이콘 */
+    .search > .search__box{
+        height: 25px;
+        width: 410px;
+    
+    }
+    /* SEARCH : 검색아이콘 */
+    .search > .material-icons{
+        background-color: #F6F5F0;
+        color: #000000;
+        top: 12px;
+        left: 590px;
+        height: 20px;
+        font-size: 20px;
+        cursor: pointer;
+        border: 0.1rem outset rgb(0, 0, 0);
+        align-items: center; 
+        position: fixed;
+    
+    }
+    
+    /* Bar1-right */
+    
+    #bar1-right{
+        height: 60px;
+        font-size: 14px;
+        top: 0px;
+        right: 0px;
+        width: 1000px;
+        height: 60px;
+        align-items: center; 
+        display: flex;
+        position: fixed;
+    }
+    /* 배송지 */
+    .delivery{
+        color: #F6F5F0;
+        font-size: 20px;
+        right: 100px;
+        left: 50px;
+        top: 18px;
+        margin-left: 800px;
+        display: fixed;
+        position: fixed;
+    }
+    
+    /* delivery 배송지 입력 아이콘 */
+    .delivery .material-icons{
+        color: #F6F5F0;
+        left: 815px;
+        top: 15px;
+        display: fixed;
+        position: fixed;
+    
+    }
+    
+    /* 로그인 */
+    .login{
+        color: #F6F5F0;
+        font-size: 20px;
+        right: 100px;
+        left: 300px;
+        top: 18px;
+        margin-left: 800px;
+        display: fixed;
+        position: fixed;
+    }
+    
+    /* 회원가입 */
+    .signin{
+        color: #F6F5F0;
+        font-size: 20px;
+        right: 100px;
+        left: 400px;
+        top: 18px;
+        margin-left: 800px;
+        display: fixed;
+        position: fixed;
+    }
+    
+        /* Bar2 */
+    #bar2{
+        background-color: rgb(39, 39, 95);
+        color: #F6F5F0;
+        height: 40px;
+        width: 100%;
+        font-size: 20px;
+        top: 60px;
+        align-items: center;
+        position: fixed;
+    }
+    
+    /* Bar2-left: 햄버거 바 */
+    .bar2-left{
+        color: #F6F5F0;
+        height: 40px;
+        left: 0px;
+        width: 200px;
+        font-size: 20px;
+        align-items: center;
+        position: fixed;
+        z-index: index 5;
+    }
+    /* 햄버거바 여는 아이콘 */
+    .bar2-left>.material-icons#btn--open {
+        display: block;
+    }
+    /* 햄버거바 닫는 아이콘 */
+    .bar2-left>.material-icons#btn--close {
+        display: none;}
+    
+        /* nav */
+    nav {
+        background: #000;
+        color: #F6F5F0;
+        font-size: 15px;
+        top: 40px;
+        height: calc(100vh - 60px);
+        width: 300px;
+        position: absolute;
+        transform: translateX(-100%);
+        transition: .4s;
+    }
+    /* 햄버거바 누르면 뜨는 사이드바 */
+    .item__name{
+        font-size: 20px;
+    }
+    .item__contents{
+        font-size: 15px;
+    }
+    #side__menu>.item>.item__name>.material-icons{
         color: #F6F5F0;
         font-size: 20px;
         font-weight: 700;
-        padding-top: 7px;
-        padding-left: 10px;
-        white-space: nowrap;
+        padding-top: 0px;
+        padding-left: 500px;
         cursor: pointer;
+        position: fixed;
+        }   
+    
+    /* Bar2-middle: 오늘의 딜,고객서비스, 기프트 카드, 판매, 레지스트리 */
+    #bar2-middle{
+        margin-top: 2px;
+        margin-left: 200px;
+        width: 700px;
+        position: fixed;
+        display: fixed;
+    }
+    
+    
+    /* Bar2-right: 'click here to change language' */
+    #bar2-right{
+        color: #F6F5F0;
+        width: 300px;
+        margin-top: 5px;
+        margin-left: 800px;
+        display: fixed;
+    }
+    
+    
+        /* MAIN SECTION */
+    /* inner */
+        .inner {
+            width: 500px;
+            margin: 0 auto;
+            height: 100vh;
+            /* inner안의 모든 요소를 가운데 정렬 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-
-/* HEADER */
-#main-bar{
-    align-items: center;
-}
-
-    /* Bar1 */
-#bar1{
-    background-color: black;
-    height: 60px;
-    font-size: 14px;
-    width: 100%;
-    height: 60px;
-    top: 0px;
-}
-.bar1-left{
-    display: flex;
-}
-.bar1-middle{
-    color: #F6F5F0;
-    display: flex;
-}
-.bar1-right{
-    display: flex;
-}
-    /* Bar2 */
-#bar2{
-    background-color: rgb(39, 39, 95);
-    height: 40px;
-    width: 100%;
-    margin-left: 0px;
-    align-items: center; /* 모든 아이템 정중앙에 배치 */
-    position: fixed;
-}
-
-.bar2-left{
-    display: flex;
-}
-.bar2-middle{
-    color: #F6F5F0;
-    display: flex;
-}
-.bar2-right{
-    display: flex;
-}
+        
+        /* MAIN SLIDER: 슬라이더 */
+        
+        .inner #slider {
+            width: 100%;
+            height: 50vh;
+            /* 범위를 넘어서는 부분은 보이지 않도록 설정 */
+            overflow: hidden;
+            /* 가장자리를 둥글게 */
+            border-radius: 20px;
+            position: relative;
+        }
+        
+        .inner #slider .slide {
+            /* 슬라이드 이미지는 원본 크기와 관계없이  */
+            /* 가운데를 기준으로 반복없이 주어진 영역을 꽉 채우도록 설정 */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            /* 슬라이드의 화살표와 슬라이드 이미지 간의 레이어 순서를 설정하기 위한 값 */
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* 다섯 장의 슬라이드 이미지를 div 태그의 배경 이미지로 지정 */
+        
+        .inner #slider .slide1 {
+            background-image: url(../images/slider/slide1.jfif);
+        }
+        
+        .inner #slider .slide2 {
+            background-image: url(../images/slider/slide2.jfif);
+        }
+        
+        .inner #slider .slide3 {
+            background-image: url(../images/slider/slide3.jfif);
+        }
+        
+        .inner #slider .slide4 {
+            background-image: url(../images/slider/slide4.jfif);
+        }
+        
+        .inner #slider .slide5 {
+            background-image: url(../images/slider/slide5.jfif);
+        }
+        
+        
+        /* SLIDER CONTENT */
+        /* 슬라이드 콘텐츠 */
+        
+        .inner #slider .slide__content {
+            /* 슬라이드 콘텐츠 영역은 #slider와 동일하게 잡아줍니다 */
+            width: 100%;
+            height: 60vh;
+            /* #slider 한가운데 콘텐츠가 위치하도록 가운데 정렬 */
+            display: flex;
+    
+        }
+        
+        .inner #slider .slide__content span {
+            font-size: 80px;
+            color: #F6F5F0;
+        }
+        
+        /* SLIDER ARROW */
+        
+        /* 슬라이드 왼쪽, 오른쪽 화살표에 공통으로 들어갈 속성 지정 */
+        
+        .inner #slider .arrow--left, .inner #slider .arrow--right {
+            /* 부모 요소인 #slider를 기준으로 절대위치를 지정 */
+            position: absolute;
+            /* #slider의 상단으로부터 #slider의 전체 높이의 50%에 해당하는 지점만큼 간격을 줍니다  */
+            top: 50%;
+            /* 크기를 80px만큼 주고 */
+            font-size: 80px;
+            /* margin-top 속성을 이용하여 그것의 절반만큼 위로 당겨줍니다 */
+            margin-top: -40px;
+            color: #F6F5F0;
+            cursor: pointer;
+            /* 슬라이드 이미지보다 위에 있도록 z-index값을 설정  */
+            z-index: 2;
+        }
+        
+        /* 왼쪽 화살표는 #slider의 왼편에 붙도록 합니다 */
+        
+        .inner #slider .arrow--left {
+            left: 0px;
+        }
+        
+        /* 오른쪽 화살표는 #slider의 오른편에 붙도록 합니다 */
+        
+        .inner #slider .arrow--right {
+            right: 0px;
+        }
+        
+        /* SLIDER DOTS */
+        
+        .inner #slider .dots {
+            /* 부모 요소인 #slider를 기준으로 절대 위치 지정 */
+            position: absolute;
+            /* #slider 맨 아래 정가운데 오도록 */
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            /* 슬라이드 이미지보다 위에 있는 레이어가 되도록 */
+            z-index: 2;
+            padding: 10px;
+            /* .dots 안에 있는 점들 .dot 가운데 정렬 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        /* 슬라이드 점들 */
+        
+        .inner #slider .dots .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 5px;
+            background: #F6F5F0;
+            margin: 0 3px;
+            cursor: pointer;
+            transition: .4s ease;
+        }
+        
+        /* 슬라이드를 시작할 때 첫번째 슬라이드 이미지가 보일 것이므로
+        첫번째 점 또한 다르게 보이도록 설정  */
+        
+        .inner #slider .dots .dot1 {
+            background: #1107ff;
+            width: 30px
+        }
+    
+    
+    /* 인기 쇼핑 카테고리 */
+    .grid-container {
+      width: 1000px;
+      height: 800px;
+      float: right;
+      background: rgb(255, 255, 255);
+    }
+    
+    /* 인기 쇼핑 카테고리 써져있는 박스 */
+    .item1{
+        background-color: lightslategray;
+        top: 120px;
+        left: 550px;
+        width: 150px;
+        height: 50px;
+        justify-content: center;
+        align-content: center;
+        border-radius: 20px; /* 가장자리를 둥글게 */
+        position: fixed;
+        display: fixed;
+    }
+    
+    /* 인기 쇼핑 카테고리: 모든 이미지 */
+    .image{
+        width: 250px;
+        height: 180px;
+        border-radius: 20px; /* 가장자리를 둥글게 */
+        
+    }
+    
+    /* 인기 쇼핑 카테고리: 전자제품 */
+    .item2{
+        background-color: lightblue;
+        top: 120px;
+        left: 800px;
+        width: 250px;
+        height: 200px;
+        border-radius: 20px; /* 가장자리를 둥글게 */
+        position: fixed;
+        display: fixed;
+    }
+    
+    /* 인기 쇼핑 카테고리: 미용제품 */
+    .item3{
+        background-color: lightblue;
+        top: 120px;
+        left: 1200px;
+        width: 250px;
+        height: 200px;
+        border-radius: 20px; /* 가장자리를 둥글게 */
+        float: left;
+        position: fixed;
+        display: fixed;
+    }
+    /* 인기 쇼핑 카테고리: 의류 */
+    .item4{
+        background-color: lightblue;
+        top: 350px;
+        left: 800px;
+        width: 250px;
+        height: 200px;
+        border-radius: 20px; /* 가장자리를 둥글게 */
+        float: left;
+        position: fixed;
+        display: fixed;
+    }
+    /* 인기 쇼핑 카테고리: 가구 */
+    .item5{
+        background-color: lightblue;
+        top: 350px;
+        left: 1200px;
+        width: 250px;
+        height: 200px;
+        border-radius: 20px; /* 가장자리를 둥글게 */
+        float: left;
+        position: fixed;
+        display: fixed;
+    }
+    
+        /* FOOTER */
+    /* FOOTER1 */
+    #footer1{
+        color: #F6F5F0;
+        background-color: rgb(39, 39, 95);
+        height: 60px;
+        font-size: 18px;
+        width: 100%;
+        height: 100px;
+        bottom: 20px;
+        padding: 10px 0 30px;
+        position: fixed;
+    }
+    
+    /* FOOTER2 */
+    #footer2{
+        color: #F6F5F0;
+        background-color: black;
+        height: 60px;
+        font-size: 20px;
+        width: 100%;
+        height: 20px;
+        bottom: 0px;
+        padding: 10px 0 30px;
+        align-content: center;
+        position: fixed;
+        display: fixed;}
+    }
+    
+    /* 태블릿PC */
+    /* 스크린 너비가 1400px이하면 스타일 속성 적용됨 */
+    @media screen and (max-width:1400px){
+        /* 초기화 */
+    
+    
+    /* 스마트폰 */
+    /* 스크린 너비가 700px이하면 스타일 속성 적용됨 */
+    @media screen and (max-width:700px){
+        /* 초기화 */
+    

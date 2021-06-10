@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--meta 태그는 문서의 width를 디바이스의 너비대로 하고, 초기 확대 비율은 1.0으로 하겠다 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
     <title>Amazon</title>
     <!-- 파비콘 설정 -->
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
     <!-- 각 브라우저의 기본 스타일을 초기화 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
     <!--구글 폰트-->
@@ -16,43 +17,333 @@
     <!--구글 아이콘-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://fonts.google.com/icons?selected=Material%20Icons%20Outlined%3Asearch">
-    <!--CSS와 js와 연결-->
-    <link rel="stylesheet" href="./amazon.css">
-    <script defer src="./amazon.js"></script>
+    <!--CSS와 연결-->
+    <link rel="stylesheet" href="./css/main.css">
+    <!--js와 연결-->
+    <script defer src="./js/main.js"></script>
 </head>
 <body>
+        <!-- HEADER -->
         <header id="main-bar">
+
+            <!-- bar1 -->
             <div id="bar1">
-                <div class="bar1-left"></div>
-                <div class="bar1-middle">
-                    <span class="material-icons">
-                        search
-                    </span>
+
+                <!-- bar1 left -->
+                <div id="bar1-left">                    
+                    <!-- 로고 이미지 -->
+                    <div class="logo">
+                        <!-- 로고를 클릭하면 홈으로 이동하는 링크가 걸려있습니다 -->
+                        <a href="./index.html" class="logo">
+                            <!-- 클릭하면 popAlert가 뜨도록 되어있습니다 -->
+                            <p onclick="popAlert()">
+                                <!-- 로고 이미지 삽입, image파일에 존재하는 logo,jpeg와 연결-->
+                                <img src="./images/logo.jpeg" alt="로고"> 
+                            </p>
+                        </a>
+                    </div>
+                    
                 </div>
-                
-                <div class="bar1-right"></div>
-            </div>
-            
-            <div id="bar2">
-                <div class="bar2-left">
-                    <span class="material-icons">
-                    menu
-                    모두
-                    </span>
-                </div>
-                <div class="bar2-middle">
-                    <div id="divide_bar2">
-                        <a>오늘의 거래</a>
-                        <a>고객서비스</a>
-                        <a>기프트 카드</a>
-                        <a>팔다</a>
-                        <a>레지스트리</a>
+
+                <!-- bar1 middle -->
+                <div id="bar1-middle">
+                    <!-- 검색 창 -->
+                    <div class="search">
+                        <!-- 검색 박스 아이콘 -->
+                        <input class="search__box" placeholder="검색어를 입력하시오" />
+                        <!-- 검색 아이콘 -->
+                        <span class="material-icons">
+                            검색 search
+                        </span>
                     </div>
                 </div>
-                <div class="bar2-right">
-                    <p> 기타</p>
+                
+                <!-- bar1 right -->
+                <div id="bar1-right">
+
+                    <!-- 배송지 입력 -->
+                    <div class="delivery">
+                        <a href="./html/delivery.html">
+                            <span class="material-icons">
+                                shopping_cart
+                                </span>
+                            배송지 입력
+                        </a>
+                    </div>
+                    
+                    <!-- 로그인 -->
+                    <div class="login">
+                        <!-- login.html파일과 연결되어 있다. -->
+                        <a href="./html/login.html">
+                            로그인하기
+                        </a>             
+                    </div>
+
+                    <!-- 회원가입하기 -->
+                    <div class="signin">
+                        <!-- signin.html파일과 연결되어 있다. -->
+                        <a href="./html/signin.html">
+                            회원가입하기
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- bar2 -->
+            <div id="bar2">
+
+                <!-- bar2 left(햄버거바) -->
+                <div id="bar2-left">
+                    <!-- 여는 아이콘 -->
+                    <div id="btn--open" class="material-icons">
+                        menu
+                        모두
+                    </div>
+                    <!-- 닫는 아이콘 -->
+                    <div id="btn--close" class="material-icons">
+                        close
+                    </div>
+                    
+                    <!-- 사이드 메뉴(햄버거바 누르면 뜨는 사이드바) -->
+                    <nav id="side__menu">
+                        <!-- 사이드 메뉴1 -->
+                        <li class="item">
+                            <div class="item__title">                          
+                                <div class="item__name">     
+                                    디지털 콘텐츠 및 기기                                
+                                    <span class="material-icons">
+                                        keyboard_arrow_right
+                                    </span>
+                                </div>
+                                
+                            </div>
+                            <div class="item__contents">
+                                <ul>
+                                    <li>Amazon Music</li>
+                                    <li>안드로이드 앱스토어</li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <!-- 사이드 메뉴2 -->
+                        <li class="item">
+                            <div class="item__title">
+                                <div class="item__name">
+                                    부서별 쇼핑
+                                    <span class="material-icons">
+                                        keyboard_arrow_right
+                                    </span>
+                                </div>
+                                
+                            </div>
+                            <div class="item__contents">
+                                <ul>
+                                    <li>전자</li>
+                                    <li>컴퓨터</li>
+                                    <li>예술 밑 공예</li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <!-- 사이드 메뉴3 -->
+                        <li class="item">
+                            <div class="item__title">
+                                <div class="item__name">  
+                                    프로그램 및 기능                                  
+                                    <span class="material-icons">
+                                        keyboard_arrow_right
+                                    </span>
+                                </div>
+                
+                            </div>
+                            <div class="item__contents">
+                                <ul>
+                                    <li>키프트 카드</li>
+                                    <li>Amazon Live</li>
+                                    <li>해외 쇼핑</li>
+                                    <li>모두 보기</li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <!-- 사이드 메뉴4 -->
+                        <li class="item">
+                            <div class="item__title">                                
+                                <div class="item__name"> 
+                                    도움말 및 설정                                   
+                                    <span class="material-icons">
+                                        keyboard_arrow_right
+                                    </span>
+                                </div>
+                                
+                            </div>
+                            <div class="item__contents">
+                                <ul>
+                                    <li>계정</li>
+                                    <li>한국어</li>
+                                    <li>customer Service</li>
+                                    <li>로그인</li>
+                                </ul>
+                            </div>
+                        </li>
+
+                    </nav>
+
+                <!-- bar2 middle -->
+                <div id="bar2-middle">
+                        <!-- bar2 middle는 모든 기존 amazon페이지와 연결-->
+                        <a href="https://www.amazon.com/-/ko/international-sales-offers/b/?ie=UTF8&node=15529609011&ref_=nav_cs_gb_intl_52df97a2eee74206a8343034e85cd058">
+                            오늘의 딜
+                        </a>
+                        <a href="https://www.amazon.com/-/ko/gp/help/customer/display.html?nodeId=508510&ref_=nav_cs_customerservice_2bf4fe8c5ec54e6bae2d1c24043f012b">
+                            고객서비스
+                        </a>
+                        <a href="https://www.amazon.com/-/ko/gift-cards/b/?ie=UTF8&node=2238192011&ref_=nav_cs_gc_4fb606b1a14b44e4823e00c03fc71f47">
+                            기프트 카드
+                        </a>                    
+                        <a href="https://www.amazon.com/-/ko/b/?_encoding=UTF8&ld=AZUSSOA-sell&node=12766669011&ref_=nav_cs_sell_9321d964d1ab428b8d83e204c043fc01">
+                            판매
+                        </a>
+                        <a href="https://www.amazon.com/registries?_encoding=UTF8&language=ko&redirect=true&ref_=nav_cs_registry_1c421982e26d4ec48ca364be68f201b5">
+                            레지스트리
+                        </a>
+                                    
+                </div>
+
+                <!-- bar2 right -->
+                <div id="bar2-right">
+                     <!-- bar2 right는 기존 amazon페이지와 연결 -->
+                    <a href="https://www.amazon.com/-/ko/gp/customer-preferences/select-currency/?ie=UTF8&ref_=nav_swm_undefined&pf_rd_p=bc0f93df-39b0-41b8-a23f-3b2727aaad75&pf_rd_s=nav-sitewide-msg-text-export&pf_rd_t=4201&pf_rd_i=navbar-4201&pf_rd_m=ATVPDKIKX0DER&pf_rd_r=YQNM2F712AZ9R6B4AVZ3">
+                        click here to change language </a>
                 </div>
             </div>
         </header>
+        
+        <!-- MAIN SECTION -->
+    <main>
+    <!-- 콘텐츠 영역을 잡아주는 inner -->
+    <div class="inner">
+        <!-- 수평 슬라이더 -->
+        <div id="slider">
+            <!-- 왼쪽 화살표 -->
+            <div class="material-icons arrow--left">
+                arrow_left
+            </div>
+            <!-- 오른쪽 화살표 -->
+            <div class="material-icons arrow--right">
+                arrow_right
+            </div>
+            <!-- 슬라이드 이미지들 -->
+            <div class="slide slide1">
+                <div class="slide__content">
+                </div>
+            </div>
+            <div class="slide slide2">
+                <div class="slide__content">
+                </div>
+            </div>
+            <div class="slide slide3">
+                <div class="slide__content">
+                </div>
+            </div>
+            <div class="slide slide4">
+                <div class="slide__content">
+                </div>
+            </div>
+            <div class="slide slide5">
+                <div class="slide__content">
+                </div>
+            </div>
+            
+            <!-- 슬라이드 nav 역할을 하는 점들 -->
+            <div class="dots">
+                <div class="dot dot1"></div>
+                <div class="dot dot2"></div>
+                <div class="dot dot3"></div>
+                <div class="dot dot4"></div>
+                <div class="dot dot5"></div>
+            </div>
+        </div>
+    </div>
+
+            <aside id="left"></aside>
+            <main>
+            <div id="large"></div>
+
+    <!-- 콘텐츠 영역을 잡아주는 grid-container -->
+    <div class="grid-container">
+
+        <!--인기 쇼핑 카테고리 -->
+            <!-- 인기 쇼핑 카테고리 써져있는 박스 -->
+            <div class="item1"> 인기 쇼핑 카테고리 </div>
+
+            <!-- 인기 쇼핑 카테고리: 전자제품 -->
+            <div class="item2">
+                <a href="https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Delectronics-intl-ship&field-keywords=">
+                    1 전자제품
+                </a>
+                <img class="image" src="./images/인기상품/전자제품.jpeg" alt="전자제품">                
+            </div>
+
+            <!-- 인기 쇼핑 카테고리: 미용제품 -->
+            <div class="item3">                
+                <a href="https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Dbeauty-intl-ship&field-keywords=">
+                    2 미용제품
+                </a>
+                <img class="image" src="./images/인기상품/미용제품.jpeg" alt="미용제품">
+            </div>
+
+            <!-- 인기 쇼핑 카테고리: 의류 -->
+            <div class="item4">
+                <a href="https://www.amazon.com/s?i=specialty-aps&bbn=16225018011&rh=n%3A7141123011%2Cn%3A16225018011%2Cn%3A1040660&language=ko&pf_rd_i=16225018011&pf_rd_m=ATVPDKIKX0DER&pf_rd_p=f12e6d01-4ae9-4064-9165-000cac2ebf6d&pf_rd_p=f12e6d01-4ae9-4064-9165-000cac2ebf6d&pf_rd_r=VD0AB1WA8Y66BKFZ3XDE&pf_rd_r=VD0AB1WA8Y66BKFZ3XDE&pf_rd_s=merchandised-search-left-2&pf_rd_t=101&ref=amb_link_1">
+                    3 의류
+                </a>
+                <img class="image" src="./images/인기상품/의류.jpeg" alt="의류">
+            </div>  
+                
+            <!-- 인기 쇼핑 카테고리: 가구 -->
+            <div class="item5">
+                <a href="https://www.amazon.com/s?k=%EC%B1%85%EC%83%81&rh=n%3A1055398&dc&language=ko&qid=1619260609&rnid=2941120011&ref=sr_nr_n_4">
+                4 가구
+                </a>                    
+                <img class="image" src="./images/인기상품/가구.jpeg" alt="가구">
+            </div>
+
+    </div>
+    </main>
+        <aside id="right"></aside>
+    
+
+        
+        <!-- FOOTER -->
+        <footer id="footer">
+            <!-- FOOTER1 -->
+            <div id="footer1">
+                <li>
+                    Amazon에 대해 알아보기
+                </li>
+                <li>
+                    Amazon과 함께 돈 벌기
+                </li>
+                <li>
+                    Amazon 결제 제품
+                </li>
+
+            </div>
+            <!-- FOOTER2 -->
+            <div id="footer2">
+                <!--기존 아마존 사이트와 연결 -->
+                <a href="https://www.amazon.com/-/ko/gp/help/customer/display.html?nodeId=508088&ref_=footer_cou">
+                    이용약관
+                </a>
+                <a href="https://www.amazon.com/-/ko/gp/help/customer/display.html?nodeId=468496&ref_=footer_privacy">
+                    개인정보 취급 고지
+                </a>
+                <a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=202075050&language=ko">
+                    관심 기반 광고
+                </a>
+            </div>
+
+        </footer>
 </body>
 </html>
